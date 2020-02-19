@@ -1,7 +1,8 @@
 FROM busybox:latest
 LABEL maintainer="Chris <c@crccheck.com>"
 
-ADD index.html /www/index.html
+COPY html /www/html
+#ADD html/index.html /www/index.html
 
 EXPOSE 8000
 HEALTHCHECK CMD nc -z localhost 8000
